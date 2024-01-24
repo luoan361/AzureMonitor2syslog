@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/azure/functions-action
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js project to Azure Function App - azuremonitortosyslog
+name: Build and deploy Node.js project to Azure Function App - AzureMonitortosyslog
 
 on:
   push:
@@ -64,15 +64,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_DE0BB9C23A96431581CE54F7AFE86EF4 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_A49A6DAFF55C409688B808AD62B65374 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_C96C6F3E4BFC43A4984B6B3362128BF6 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_5E81BBA1D9B64782886C0AC312D3B2D4 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_E1B73D41B67D4B0296FE665A9D94CBC9 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_2A2CC50F9F0B4768926CC15F8EAA1F86 }}
 
       - name: 'Run Azure Functions Action'
         uses: Azure/functions-action@v1
         id: fa
         with:
-          app-name: 'azuremonitortosyslog'
+          app-name: 'AzureMonitortosyslog'
           slot-name: 'Production'
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
           
