@@ -2,9 +2,9 @@
   "bindings": [
     {
       "type": "eventHubTrigger",
-      "name": "myEventHubMessage",
-      "connection": "logging01_RootManageSharedAccessKey_EVENTHUB",
-      "eventHubName": "logs",
+      "name": "LogtoSOCtest",
+      "connection": "LogtoSOCtest_RootManageSharedAccessKey_EVENTHUB",
+      "eventHubName": "azureeventlog",
       "consumerGroup": "$Default",
       "direction": "in",
       "cardinality": "many"
